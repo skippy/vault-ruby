@@ -249,7 +249,7 @@ module Vault
       end
 
       # Parse the URI
-      uri = URI.parse(path)
+      uri = URI.parse(path.to_s)
 
       # Don't merge absolute URLs
       uri = URI.parse(File.join(address, path)) unless uri.absolute?
